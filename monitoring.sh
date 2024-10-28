@@ -57,3 +57,4 @@ wall "	Architecture: $arch
 	User log: $ulog
 	Network: IP $ip ($mac)
 	Sudo: $cmnd cmd"
+	

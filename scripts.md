@@ -108,16 +108,22 @@ SYSTEM (Interruptions):
     · in        >>>        número de interrupciones.
     · cs        >>>        cambio de contextos por segunndo. 
 
-Una interrupción de sistema es una señal enviada al procesador que indica que un evento externo o interno necesita atención inmediata. Esta señal pausa temporalmente la ejecución del programa actual para que el sistema operativo pueda responder a ese evento.
+    Una interrupción de sistema es una señal enviada al procesador que indica que un evento externo o interno necesita atención inmediata. Esta señal pausa temporalmente la ejecución del programa actual para que el sistema operativo pueda responder a ese evento.
 
-    Interrupciones de hardware: Provienen de dispositivos físicos. Por ejemplo, cuando se presiona una tecla, el teclado envía una señal de interrupción para que el procesador registre esa entrada.
+        >> Interrupciones de hardware: Provienen de dispositivos físicos. Por ejemplo, cuando se presiona una tecla, el teclado envía una señal de interrupción para que el procesador registre esa entrada.
 
-    Interrupciones de software: Generadas por programas en ejecución o por el sistema operativo. Un ejemplo común es una llamada al sistema (syscall) que genera una interrupción para solicitar recursos o servicios específicos del sistema operativo.
+        >> Interrupciones de software: Generadas por programas en ejecución o por el sistema operativo. Un ejemplo común es una llamada al sistema (syscall) que genera una interrupción para solicitar recursos o servicios específicos del sistema operativo.
 
-    Interrupciones de temporizador: Configuradas por el sistema operativo para realizar ciertas tareas periódicas, como programar procesos o medir el tiempo transcurrido.
+        >> Interrupciones de temporizador: Configuradas por el sistema operativo para realizar ciertas tareas periódicas, como programar procesos o medir el tiempo transcurrido.
 
-    Interrupciones de excepciones: Se producen cuando hay condiciones anormales en la ejecución de un programa, como una división por cero, errores de segmentación, o desbordamiento de pila.
+        >> Interrupciones de excepciones: Se producen cuando hay condiciones anormales en la ejecución de un programa, como una división por cero, errores de segmentación, o desbordamiento de pila.
 
+CPU (% del tiempo real)
+    · us        >>>         tiempo de procesos de usuarios.
+    · sy        >>>         tiempo de procesos de sistema.
+    · id        >>>         tiempo inactivo.
+    · wa        >>>         tiempo de operaciones de E/S.
+    · st        >>>         tiempo "robado" por máquinas virtuales.
 
 - vmstat 1 3 | tail -1 | awk '{cpu_use += $15} END {printf("%.1f%%\n"), 100-cpu_use}'
 
