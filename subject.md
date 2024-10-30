@@ -25,6 +25,7 @@ Instrucciones generales
 
 • El uso de VirtualBox es obligatorio (o UTM en caso de que VirtualBox no funcione en tu máquina).
 • Solo debes entregar un archivo llamado signature.txt en la raíz de tu repositorio.
+
 Debes pegar en él la firma del disco virtual de tu máquina. Ve a Entrega y evaluación para más información.
 
 ## Capítulo IV
