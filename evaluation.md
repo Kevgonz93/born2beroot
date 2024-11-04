@@ -82,7 +82,7 @@
     ucredit=-1          >>>         mínimo una mayúscula (+1 sería máximo una)
     dcredit=-1          >>>         mínimo un número.
     lcredit=-1          >>>         mínimo una minúscula.
-    maxrepeat=3         >>>         no se puede repetir más de 3 veces un carácter.
+    maxrepeat=3         >>>         no se puede repetir más de 3 veces un carácter consecutivo.
     reject_username     >>>         no puede tener el nombre del usuario.
     difok=7             >>>         al menos 7 caracteres disitintos de la antigua contraseña.
     enforce_for_root    >>>         aplica la política para usuario "Root".
@@ -91,3 +91,58 @@
     sudo addgroup evaluating            >>>         nuevo grupo.
     sudo adduser new_user evaluating    >>>         añadir usuario al grupo
     getent group evaluating             >>>         comprobar
+
+- Reemplazar el hostname por otro
+    sudo nano /etc/hostname         >>>         reemplazar "kegonzal42" por "student42"
+    sudo nano /etc/hosts            >>>         reemplazar el login por "new_user"
+
+    Reiniciar con "sudo reboot" y debería aparecer el nuevo hostname con "hostname"
+
+- Comprobar las particiones:
+    lsblk           >>>             muestra la partición del disco
+
+- Comprobar sudo:
+    which sudo
+    dpkg -s sudo
+
+    which           : busca dónde está el ejecutable del comando seleccionado.
+    dpkg            : es un sistema de gestión de paquetes, permitiendo instalar, eliminar y consultar.
+        · dpkg -s   : muestra el "estado".
+
+- Muestra reglas de sudo
+    nano /etc/sudoers.d/sudo_config
+
+    Defaults  passwd_tries=3 >>> número de intentos
+    Defaults  badpass_message="Error: Pleas try again"  >>> mensaje en caso de error
+    Defaults  logfile="/var/log/sudo/sudo_config"   >>> lugar que almacena los intentos de sudo
+    Defaults  log_input, log_output     >>> los comandos, tantos input y output, queden registrados
+    Defaults  iolog_dir="/var/log/sudo"     >>> lugar donde quedarán registrados.
+    Defaults  requiretty    >>> requiere uns sesión TTY para ejecutar sudo
+    Defaults  secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin"  >>> Restringe los directorios, estableciendo un entorno seguro de variables PATH.
+
+- Verificar UFW
+    sudo service ufw status         >>>         revisa la actividad.
+    sudo ufw status                 >>>         revisa la configuración
+
+    UFW es una interfaz de configuración de firewall que usa comandos simples para configurar las iptables (programa que permite a un administrador de sistemas configurar el conjunto de reglas), estos permiten definir políticas de firewall para controlar el trafico de entrada y salida.
+
+    ![alt text](image.png)
+
+    · ufw.service - Uncomplicated firewall: Nombre del servicio
+    · Loaded: Indica que el archivo de configuración está cargado desde /lib/systemd/system/ufw.service. También muestra que el servicio está habilitado, lo que significa que se inicia automáticamente en cada arranque del sistema.
+    · Active: active (exited): Esto indica que el servicio UFW está activo, en estado "exited", lo cual significa que la configuración del firewall fue aplicada exitosamente, pero el proceso en sí no está en ejecución continua, ya que configura el firewall y luego finaliza.
+    · Process: 315 ExecStart=/lib/ufw/ufw-init start quiet (code=exited, status=0/SUCCESS): Informa que el proceso para iniciar UFW se ejecutó con éxito.
+    · Main PID: 315: Es el ID del proceso principal que ejecutó la configuración de UFW.
+    · CPU: 43ms: Tiempo de CPU para ejecutar UFW.
+
+- Añadir puerto UFW
+    sudo ufw allow 8080             >>>         crea el puerto
+    sudo ufw status numbered        >>>         verifica
+    sudo ufw delete #regla          >>>         borra la regla
+
+- Revisar el servicio SSH
+        sudo service ssh status         >>>         Active: active(running)
+
+    SSH Es un protocolo de red que permite contectarse de forma segura a otro sistema a través de una red, por su comunicación encriptada (tanto usuario como la data).
+
+    SSH permite iniciar sesión desde el terminal. También usa llaves públicas y privadas para la autenticación segura (no contraseñas).
