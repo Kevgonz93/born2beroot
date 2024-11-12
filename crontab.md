@@ -15,5 +15,6 @@ Comando que gestiona el archivo de crontab. especificando el usuario, puedes edi
 
 - */10 * * * * sh /ruta/monitoring.sh
 
-Cada 10 minutos ejecturará el comando monitoring.hs
-
+Cada 10 minutos ejecturará el comando monitoring.hs.
+*/xx    >>> LO HACE REPETITIVO.
+XX      >>> lo hace con sa unidad.

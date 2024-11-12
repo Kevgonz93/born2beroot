@@ -1,8 +1,10 @@
 # Born2beRoot
+
 Resumen: Este documento es un ejercicio de administración de sistemas.
 Versión: 3.2
 
 ## Índice general
+
         I. Preámbulo 2
         II. Introducción 3
         III. Instrucciones generales 4
@@ -11,9 +13,11 @@ Versión: 3.2
         VI. Entrega y evaluación 12
 
 ## Capítulo I
+
 Preámbulo
 
 ## Capítulo II
+
 Introducción
 
 Este proyecto busca introducirte al maravilloso mundo de la virtualización.
@@ -21,6 +25,7 @@ Este proyecto busca introducirte al maravilloso mundo de la virtualización.
 Crearás tu primera máquina en VirtualBox (o UTM si no puedes utilizar VirtualBox) bajo instrucciones específicas. Por lo tanto, al final del proyecto, serás capaz de configurar tu propio sistema operativo utilizando reglas estrictas.
 
 ## Capítulo III
+
 Instrucciones generales
 
 • El uso de VirtualBox es obligatorio (o UTM en caso de que VirtualBox no funcione en tu máquina).
@@ -29,6 +34,7 @@ Instrucciones generales
 Debes pegar en él la firma del disco virtual de tu máquina. Ve a Entrega y evaluación para más información.
 
 ## Capítulo IV
+
 Parte obligatoria
 
 Este proyecto consiste en configurar tu primer servidor siguiendo una serie de normas concretas.
@@ -43,7 +49,7 @@ Debes crear al menos 2 particiones cifradas usando LVM. Puedes encontrar un ejem
 
 Durante la defensa, se te harán unas preguntas sobre el sistema operativo que has elegido. Debes saber, por lo tanto, las diferencias entre aptitude y apt, o qué son SELinux y AppArmor. En definitiva, ¡entiende lo que estás utilizando!
 
-El servicio SSH se ejecutará obligatoriamente en el puerto 4242 de tu máquina virtual. Por seguridad, no debe ser posible conectarte a través de SSH como root. 
+El servicio SSH se ejecutará obligatoriamente en el puerto 4242 de tu máquina virtual. Por seguridad, no debe ser posible conectarte a través de SSH como root.
 
 El uso de SSH será comprobado durante la defensa creando un nuevo usuario. Por lo tanto, debes entender cómo funciona.
 
@@ -123,6 +129,7 @@ Para Debian:
         (imagen)
 
 ## Capítulo V
+
 Parte bonus
 
 Lista de bonus:
@@ -136,6 +143,7 @@ Para completar la parte bonus, tienes la posibilidad de configurar servicios adi
 La parte bonus solo será evaluada si la parte obligatoria está PERFECTA. Perfecta significa que la parte obligatoria es integramente funcional y completa. Si no has completado TODA la parte obligatoria, tu parte bonus no será valuada.
 
 ## Capítulo VI
+
 Entrega y evaluación
 
 Solo deberás enviar un archivo signature.txt en la raíz de tu repositorio Git. Debes pegar en él la firma de tu disco virtual. Para obtener esta firma, debes primero abrir la ruta por defecto de instalación (es decir, donde tus VMs se guardan).

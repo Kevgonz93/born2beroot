@@ -22,12 +22,12 @@
 
 - ¿Por qué Debian? Diferencias con Rocky.
 
-    Entre las dos opsciones (Debian y Rocky), la configuración de Debian es más sencilla. Además, Rocky está diseñada para el entorno empresarial haciéndolo más eficiente para ese entorno.
-    Debian tiene más estabilidad¿qué ; su soporte es brindado por la comunidad, haciéndolo aumentar su durabilidad (al menos las versiones "stable"). Debian también tiene una política de software libre.
+    Entre las dos opciones (Debian y Rocky), la configuración de Debian es más sencilla. Además, Rocky está diseñada para el entorno empresarial haciéndolo más eficiente para ese entorno.
+    Debian tiene más estabilidad ya que su soporte es brindado por la comunidad, haciéndolo aumentar su durabilidad (al menos las versiones "stable"). Debian también tiene una política de software libre.
 
 - Propósito de la Máquina Virtual
 
-    Crear un servidor.
+    Crear un entorno independiente del sistema operativo.
 
 - Diferencia entre ATP y APTITUDE (herramientas de gestión de paquetes)
 
@@ -146,3 +146,7 @@
     SSH Es un protocolo de red que permite contectarse de forma segura a otro sistema a través de una red, por su comunicación encriptada (tanto usuario como la data).
 
     SSH permite iniciar sesión desde el terminal. También usa llaves públicas y privadas para la autenticación segura (no contraseñas).
+- Modificar el cronbtab
+        sudo crontab -u root -e         >>>         abre el fichero crontab
+        sudo /etc/init.d/cron stop      >>>         detiene la ejecucción del script
+        sudo /etc/init.d/cron start     >>>         reinicia la ejecucción.
