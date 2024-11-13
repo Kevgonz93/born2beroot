@@ -139,6 +139,8 @@
 
   SSH Es un protocolo de red que permite contectarse de forma segura a otro sistema a través de una red, por su comunicación encriptada (tanto usuario como la data). SSH permite iniciar sesión desde el terminal. También usa llaves públicas y privadas para la autenticación segura (no contraseñas).
 
+  ssh user@localhost -p (#puerto)     >>>     conectarse desde un usuario:
+
 - Modificar el cronbtab
         sudo crontab -u root -e         >>>         abre el fichero crontab
         sudo /etc/init.d/cron stop      >>>         detiene la ejecucción del script
