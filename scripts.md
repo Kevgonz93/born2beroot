@@ -27,7 +27,7 @@ Linux kegonzal42 6.1.0-26-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.1.112-1 (2024-09
 
         -total- -used-   -free-  -shared-   -buff/cache-    -available-
 Mem      1007    205       830       0           90              801
-Swap     1023     0       1023      
+Swap     1023     0       1023
 
 - free --mega | awk '$1 == "Mem:" {print $3}'           >>>         Muestra sólo la memoria utilizada.
 
@@ -82,7 +82,7 @@ DESGLOCE:
 -r- -b- -swpd-  -free-  -buff-  -cache- -si-    -so-    -bi-    -bo-  -in-    -cs-    -us-    -sy-    -id-    -wa-    -st-
 2    0     0     82784   8972    78240    0      0      232      12    307     62      0       0       99       1       0
 
-PROCESOS: 
+PROCESOS:
     · r         >>>         número de procesos en ejecución (listos para usar la CPU)
     · b         >>>         núero de procesos en espera.
 
@@ -91,7 +91,7 @@ MEMORIA:
     · free      >>>         memoria libre (en KB)
     · buff      >>>         memoria usado los buffers.
     · cache     >>>         memoria usado el cache.
-    
+
 Diferencia entre buffer y cache en el kernel:
 Buffer: almacena datos temporalmente en tránsito entre la memoria y los dispositivos de E/S.
 Cache: Almacena datos que han sido leídos o escritos recientemente en memoria, facilita el accesos a ellos rápidamente sin operaciones adicionales.
@@ -106,7 +106,7 @@ IO (In/Out):
 
 SYSTEM (Interruptions):
     · in        >>>        número de interrupciones.
-    · cs        >>>        cambio de contextos por segunndo. 
+    · cs        >>>        cambio de contextos por segunndo.
 
     Una interrupción de sistema es una señal enviada al procesador que indica que un evento externo o interno necesita atención inmediata. Esta señal pausa temporalmente la ejecución del programa actual para que el sistema operativo pueda responder a ese evento.
 
@@ -180,7 +180,6 @@ kegonzal42-vg-swap_1    >>> área de intercambio (memoria virtual del sistema).
 kegonzal-vg-home        >>> MVL montada en /home (almacenamiento para usuarios).
 sr0                     >>> dispositivo de lectura, unidad CD/DV o virtual (ROM).
 
-
 - if [ $(lsblk | grep "lvm" | wc -l) -gt 0 ]; then echo yes; else echo no; fi           >>>         comando que verifica si LVM está activo.
 
 DESGLOSE:
@@ -240,4 +239,3 @@ DESGLOCE:
     _COMM=sudo      >>>         muestra logs generados con SUDO.
     grep COMMAND    >>>         filtra las líneas con COMMAND
     wc -l           >>>         cuenta el total
-

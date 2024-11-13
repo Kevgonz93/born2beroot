@@ -17,21 +17,12 @@
 
 - ¿Por qué Debian? Diferencias con Rocky.
 
-<<<<<<< HEAD
     Entre las dos opciones (Debian y Rocky), la configuración de Debian es más sencilla. Además, Rocky está diseñada para el entorno empresarial haciéndolo más eficiente para ese entorno.
     Debian tiene más estabilidad ya que su soporte es brindado por la comunidad, haciéndolo aumentar su durabilidad (al menos las versiones "stable"). Debian también tiene una política de software libre.
 
 - Propósito de la Máquina Virtual
 
-    Crear un entorno independiente del sistema operativo.
-=======
-  Entre las dos opsciones (Debian y Rocky), la configuración de Debian es más sencilla. Además, Rocky está diseñada para el entorno empresarial haciéndolo más eficiente para ese entorno.
-  Debian tiene más estabilidad¿qué ; su soporte es brindado por la comunidad, haciéndolo aumentar su durabilidad (al menos las versiones "stable"). Debian también tiene una política de software libre.
-
-- Propósito de la Máquina Virtual
-
-  Crear un servidor.
->>>>>>> refs/remotes/origin/main
+  Crear un entorno independiente del sistema operativo.
 
 - Diferencia entre ATP y APTITUDE (herramientas de gestión de paquetes)
 
@@ -63,6 +54,7 @@
 
 - Revisar qué S.O. está en uso:
   uname -v >>> #1 SMP PREEMPT_DYNAMIC Debian 6.1.112-1 (2024-09-30)
+  head -n 2 /etc/os-release     >>>     muestra info del S.O.
 
 - Revisar que el user está en SUDO y USER42
   getent group sudo
@@ -145,14 +137,9 @@
 - Revisar el servicio SSH
   sudo service ssh status >>> Active: active(running)
 
-  SSH Es un protocolo de red que permite contectarse de forma segura a otro sistema a través de una red, por su comunicación encriptada (tanto usuario como la data).
+  SSH Es un protocolo de red que permite contectarse de forma segura a otro sistema a través de una red, por su comunicación encriptada (tanto usuario como la data). SSH permite iniciar sesión desde el terminal. También usa llaves públicas y privadas para la autenticación segura (no contraseñas).
 
-<<<<<<< HEAD
-    SSH permite iniciar sesión desde el terminal. También usa llaves públicas y privadas para la autenticación segura (no contraseñas).
 - Modificar el cronbtab
         sudo crontab -u root -e         >>>         abre el fichero crontab
         sudo /etc/init.d/cron stop      >>>         detiene la ejecucción del script
         sudo /etc/init.d/cron start     >>>         reinicia la ejecucción.
-=======
-  SSH permite iniciar sesión desde el terminal. También usa llaves públicas y privadas para la autenticación segura (no contraseñas).
->>>>>>> refs/remotes/origin/main
